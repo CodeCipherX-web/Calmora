@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Calmora - Mental Health Awareness & Support Platform">
+    <title>Calmora - Mental Health Support</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Calmora">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="favicon.svg" alt="Calmora Logo" style="width: 32px; height: 32px; flex-shrink: 0;">
+                <span>Calmora</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="therapists.html">Therapists</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="mood-tracker.html">Mood Tracker</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div style="margin-bottom: 2.5rem; position: relative; display: inline-block; max-width: 600px;">
+                        <div style="position: absolute; top: -15px; right: -15px; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 24px; opacity: 0.15; z-index: 0; transform: rotate(2deg);"></div>
+                        <div style="position: absolute; bottom: -10px; left: -10px; width: 100%; height: 100%; background: linear-gradient(135deg, var(--accent-color), var(--success-color)); border-radius: 24px; opacity: 0.1; z-index: 0; transform: rotate(-2deg);"></div>
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop&q=80" alt="Mental Health Support" style="width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow-xl); border: 4px solid var(--primary-color); position: relative; z-index: 1; transition: var(--transition);" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='var(--shadow-2xl)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='var(--shadow-xl)'">
+                    </div>
+                    <h1 style="margin-bottom: 1.5rem;">Mental Health Awareness & Support</h1>
+                    <p style="font-size: 1.125rem; line-height: 1.7; color: var(--text-medium); margin-bottom: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">Our mission is to raise mental health awareness, provide educational resources, and offer support tools to help you on your mental wellness journey.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="signup.html" class="btn">Get Started</a>
+                        <a href="login.html" class="btn btn-secondary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="section" style="background: var(--bg-gray); padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">Mental Health Awareness</h2>
+                <p style="text-align: center; color: var(--text-medium); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Understanding the facts helps us break down barriers and build a more supportive community.</p>
+                <div class="grid grid-4">
+                    <div class="card stat-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h3 style="font-size: 2.75rem; margin-bottom: 1rem; color: var(--primary-color); font-weight: 700; line-height: 1;">1 in 5</h3>
+                            <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Adults experience mental illness</p>
+                            <p style="font-size: 0.875rem; margin: 0; color: var(--text-light);">each year in the United States</p>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h3 style="font-size: 2.75rem; margin-bottom: 1rem; color: var(--accent-color); font-weight: 700; line-height: 1;">50%</h3>
+                            <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Of mental illness begins</p>
+                            <p style="font-size: 0.875rem; margin: 0; color: var(--text-light);">by age 14</p>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h3 style="font-size: 2.75rem; margin-bottom: 1rem; color: var(--secondary-color); font-weight: 700; line-height: 1;">60%</h3>
+                            <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Don't receive treatment</p>
+                            <p style="font-size: 0.875rem; margin: 0; color: var(--text-light);">due to stigma and barriers</p>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h3 style="font-size: 2.75rem; margin-bottom: 1rem; color: var(--success-color); font-weight: 700; line-height: 1;">90%</h3>
+                            <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Can recover with</p>
+                            <p style="font-size: 0.875rem; margin: 0; color: var(--text-light);">proper support and treatment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section" style="padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">How We Can Help</h2>
+                <p style="text-align: center; color: var(--text-medium); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Explore our comprehensive tools and resources designed to support your mental wellness journey.</p>
+                <div class="grid grid-4">
+                    <div class="card feature-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--primary-color); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 0.75rem; font-size: 1.375rem; font-weight: 600;">Learn</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.6;">Access educational articles, facts, and helpful resources about mental health.</p>
+                            <a href="resources.html" class="btn btn-secondary" style="width: 100%;">Explore Resources</a>
+                        </div>
+                    </div>
+                    <div class="card feature-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--accent-color); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 0.75rem; font-size: 1.375rem; font-weight: 600;">Track Mood</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.6;">Monitor your daily mood patterns and visualize trends over time.</p>
+                            <a href="mood-tracker.html" class="btn btn-secondary" style="width: 100%;">Start Tracking</a>
+                        </div>
+                    </div>
+                    <div class="card feature-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--success-color); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 0.75rem; font-size: 1.375rem; font-weight: 600;">Chat Support</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.6;">Get instant support and guidance from our simple support bot.</p>
+                            <a href="chatbot.html" class="btn btn-secondary" style="width: 100%;">Chat Now</a>
+                        </div>
+                    </div>
+                    <div class="card feature-card">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--error-color); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 0.75rem; font-size: 1.375rem; font-weight: 600;">Helplines</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.6;">Access crisis helplines and emergency support resources.</p>
+                            <a href="contact.html#helplines" class="btn btn-secondary" style="width: 100%;">Get Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <!-- Newsletter Section -->
+                <div style="text-align: center;">
+                    <h4 style="color: white; margin-bottom: 1rem;">Stay Updated</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Subscribe to our newsletter for mental health tips and updates</p>
+                    <form style="display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto;" onsubmit="event.preventDefault(); alert('Newsletter subscription coming soon!');">
+                        <input type="email" placeholder="Enter your email" style="flex: 1; padding: 0.75rem; border-radius: 8px; border: none; font-family: 'Poppins', sans-serif;" required>
+                        <button type="submit" class="btn" style="min-width: 100px;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Social Icons & Links -->
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                <a href="#" aria-label="Facebook" style="color: white; font-size: 1.25rem; opacity: 0.8; transition: var(--transition-fast); text-decoration: none;">Facebook</a>
+                <a href="#" aria-label="Twitter" style="color: white; font-size: 1.25rem; opacity: 0.8; transition: var(--transition-fast); text-decoration: none;">Twitter</a>
+                <a href="#" aria-label="Instagram" style="color: white; font-size: 1.25rem; opacity: 0.8; transition: var(--transition-fast); text-decoration: none;">Instagram</a>
+                <a href="#" aria-label="LinkedIn" style="color: white; font-size: 1.25rem; opacity: 0.8; transition: var(--transition-fast); text-decoration: none;">LinkedIn</a>
+            </div>
+            
+            <!-- Quick Links -->
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+                <a href="contact.html">Contact Us</a>
+                <a href="resources.html">Resources</a>
+                <a href="mood-tracker.html">Mood Tracker</a>
+                <a href="chatbot.html">Chat Support</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 0.875rem;">&copy; 2025 Calmora - Mental Health Awareness & Support Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="image-fallback.js"></script>
+    <script src="helpers.js"></script>
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="permissions.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

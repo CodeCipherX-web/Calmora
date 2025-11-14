@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Login to Calmora">
+    <title>Login - Calmora</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="favicon.svg" alt="Calmora Logo" style="width: 32px; height: 32px; flex-shrink: 0;">
+                <span>Calmora</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="therapists.html">Therapists</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="mood-tracker.html">Mood Tracker</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section" style="padding: 3rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+                    <!-- Image Section -->
+                    <div class="login-image-section">
+                        <div style="position: relative; padding: 2rem;">
+                            <div style="position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 24px; opacity: 0.15; z-index: 0; transform: rotate(3deg);"></div>
+                            <div style="position: absolute; bottom: -15px; left: -15px; width: 100%; height: 100%; background: linear-gradient(135deg, var(--accent-color), var(--success-color)); border-radius: 24px; opacity: 0.1; z-index: 0; transform: rotate(-3deg);"></div>
+                            <div class="auth-image-container" style="position: relative; z-index: 1; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-xl); border: 4px solid var(--primary-color);">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=700&fit=crop&q=80" alt="Welcome Back" class="auth-image active" style="width: 100%; height: auto; display: block; transition: opacity 1.5s ease-in-out;">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=700&fit=crop&q=80" alt="Mental Health Support" class="auth-image" style="width: 100%; height: auto; display: none; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1.5s ease-in-out;">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=700&fit=crop&q=80" alt="Wellness Journey" class="auth-image" style="width: 100%; height: auto; display: none; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1.5s ease-in-out;">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=700&fit=crop&q=80" alt="Self Care" class="auth-image" style="width: 100%; height: auto; display: none; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1.5s ease-in-out;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Section -->
+                    <div class="form-container">
+                        <div class="card">
+                            <div style="padding: 2rem;">
+                                <!-- Logged In State (hidden by default) -->
+                                <div id="loggedInState" style="display: none;">
+                                    <div style="text-align: center; margin-bottom: 2rem;">
+                                        <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: white; box-shadow: var(--shadow-lg);" id="loggedInAvatar">
+                                            <!-- Avatar will be populated by JavaScript -->
+                                        </div>
+                                        <h2 style="margin-bottom: 0.5rem; font-size: 1.75rem; font-weight: 700;" id="loggedInName">Welcome back!</h2>
+                                        <p style="color: var(--text-medium); margin-bottom: 0.5rem;" id="loggedInEmail"></p>
+                                        <p style="color: var(--success-color); font-weight: 600; margin-bottom: 2rem;">
+                                            ✓ You are currently logged in
+                                        </p>
+                                    </div>
+                                    
+                                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                        <a href="index.html" class="btn" style="width: 100%; text-align: center; text-decoration: none;">
+                                            Go to Homepage
+                                        </a>
+                                        <button type="button" id="logoutBtnPage" class="btn btn-secondary" style="width: 100%;">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem; vertical-align: middle;">
+                                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                                <polyline points="16 17 21 12 16 7"></polyline>
+                                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                                            </svg>
+                                            Logout
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Login Form (shown by default) -->
+                                <div id="loginFormContainer">
+                                    <h2 style="text-align: center; margin-bottom: 0.75rem; font-size: 2rem; font-weight: 700;">Login to Calmora</h2>
+                                    <p style="text-align: center; color: var(--text-medium); margin-bottom: 2rem;">Welcome back! Please login to continue.</p>
+
+                                    <!-- Form Feedback -->
+                                    <div id="formFeedback" class="form-feedback"></div>
+
+                                    <!-- Login Form -->
+                                    <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username or Email</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-control" 
+                            placeholder="Enter your username or email"
+                            required
+                            autocomplete="username"
+                            aria-describedby="username-error"
+                        >
+                        <span class="error-message" id="username-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-control" 
+                            placeholder="Enter your password"
+                            required
+                            autocomplete="current-password"
+                            aria-describedby="password-error"
+                        >
+                        <span class="error-message" id="password-error" role="alert"></span>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+
+                    <div style="text-align: center; margin: 1rem 0;">
+                        <a href="#" style="font-size: 0.875rem;">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">
+                        Login
+                    </button>
+                </form>
+
+                            <p style="text-align: center; margin-top: 2rem; color: var(--text-medium);">
+                                Don't have an account? <a href="signup.html" style="color: var(--primary-color); font-weight: 600;">Sign up here</a>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Calmora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="theme-toggle.js"></script>
+    <script src="helpers.js"></script>
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="permissions.js"></script>
+    <script src="user-info.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Function to show logged in state
+        function showLoggedInState() {
+            const loginFormContainer = document.getElementById('loginFormContainer');
+            const loggedInState = document.getElementById('loggedInState');
+            const loggedInAvatar = document.getElementById('loggedInAvatar');
+            const loggedInName = document.getElementById('loggedInName');
+            const loggedInEmail = document.getElementById('loggedInEmail');
+            
+            if (loginFormContainer && loggedInState) {
+                // Hide login form
+                loginFormContainer.style.display = 'none';
+                // Show logged in state
+                loggedInState.style.display = 'block';
+                
+                // Get user data
+                const user = window.Auth ? window.Auth.getCurrentUser() : null;
+                if (user) {
+                    // Get user initials for avatar
+                    const initials = user.name ? user.name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) : 'U';
+                    loggedInAvatar.textContent = initials;
+                    loggedInName.textContent = `Welcome back, ${user.name || 'User'}!`;
+                    loggedInEmail.textContent = user.email || '';
+                }
+            }
+        }
+
+        // Function to show login form
+        function showLoginForm() {
+            const loginFormContainer = document.getElementById('loginFormContainer');
+            const loggedInState = document.getElementById('loggedInState');
+            
+            if (loginFormContainer && loggedInState) {
+                loggedInState.style.display = 'none';
+                loginFormContainer.style.display = 'block';
+            }
+        }
+
+        // Initialize user info display on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is already logged in and update navbar
+            if (window.UserInfo && window.UserInfo.update) {
+                setTimeout(async () => {
+                    await window.UserInfo.update();
+                    // Check if authenticated after navbar update
+                    if (window.Helpers && window.Helpers.isAuthenticated()) {
+                        showLoggedInState();
+                    }
+                }, 200);
+            }
+
+            // Handle logout button on page
+            const logoutBtnPage = document.getElementById('logoutBtnPage');
+            if (logoutBtnPage) {
+                logoutBtnPage.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    logoutBtnPage.disabled = true;
+                    const originalHTML = logoutBtnPage.innerHTML;
+                    logoutBtnPage.innerHTML = `
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spinning" style="margin-right: 0.5rem; vertical-align: middle;">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        Logging out...
+                    `;
+                    
+                    try {
+                        await window.Auth.logout();
+                        // After logout, show login form
+                        showLoginForm();
+                        logoutBtnPage.disabled = false;
+                        logoutBtnPage.innerHTML = originalHTML;
+                    } catch (error) {
+                        console.error('Logout error:', error);
+                        logoutBtnPage.disabled = false;
+                        logoutBtnPage.innerHTML = originalHTML;
+                        alert('Logout failed. Please try again.');
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        // Image slideshow for login page
+        (function() {
+            'use strict';
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const imageContainer = document.querySelector('.login-image-section .auth-image-container');
+                if (imageContainer) {
+                    const images = imageContainer.querySelectorAll('.auth-image');
+                    let currentIndex = 0;
+                    
+                    function switchImage() {
+                        // Hide current image
+                        images[currentIndex].style.opacity = '0';
+                        setTimeout(() => {
+                            images[currentIndex].style.display = 'none';
+                            
+                            // Move to next image
+                            currentIndex = (currentIndex + 1) % images.length;
+                            
+                            // Show next image
+                            images[currentIndex].style.display = 'block';
+                            setTimeout(() => {
+                                images[currentIndex].style.opacity = '1';
+                            }, 50);
+                        }, 1500);
+                    }
+                    
+                    // Switch image every 4 seconds
+                    setInterval(switchImage, 4000);
+                }
+            });
+        })();
+
+        // Login form handler
+        (function() {
+            'use strict';
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const loginForm = document.getElementById('loginForm');
+                const formFeedback = document.getElementById('formFeedback');
+                const submitButton = loginForm.querySelector('button[type="submit"]');
+
+                // Check if already authenticated and show user info
+                const checkAuth = async () => {
+                    if (window.Helpers && window.Helpers.isAuthenticated()) {
+                        // User is logged in - show user info and hide login form
+                        if (window.UserInfo && window.UserInfo.update) {
+                            await window.UserInfo.update();
+                        }
+                        showLoggedInState();
+                    }
+                };
+                checkAuth();
+
+                // Handle form submission
+                window.Main.handleFormSubmit(loginForm, async function(form) {
+                    const formData = new FormData(form);
+                    const credentials = {
+                        username: formData.get('username').trim(),
+                        password: formData.get('password'),
+                    };
+
+                    // Show loading state
+                    window.Helpers.showButtonLoading(submitButton);
+                    window.Helpers.hideMessage(formFeedback);
+
+                    try {
+                        // Check if API is available
+                        if (!window.API || !window.API.auth) {
+                            throw new Error('API not loaded. Please refresh the page.');
+                        }
+
+                        // Check network permissions and request if needed
+                        if (window.Permissions && !window.Permissions.status.network) {
+                            const networkAccess = await window.Permissions.requestNetwork();
+                            if (!networkAccess) {
+                                throw new Error('Network access is required. Please allow network access to log in.');
+                            }
+                        }
+
+                        // Call login API
+                        const result = await window.API.auth.login(credentials);
+                        
+                        // Handle success - result should be { success: true, user: {...} }
+                        const success = window.Auth.handleAuthSuccess(result);
+                        
+                        if (success) {
+                            // Show success message
+                            formFeedback.classList.add('success');
+                            formFeedback.classList.remove('error');
+                            formFeedback.textContent = 'Login successful! Redirecting...';
+                            formFeedback.classList.add('show');
+
+                            // Immediately update navbar to show user info
+                            if (window.UserInfo && window.UserInfo.update) {
+                                await window.UserInfo.update();
+                            }
+
+                            // Show logged in state instead of redirecting immediately
+                            showLoggedInState();
+                            
+                            // Redirect to homepage after a delay
+                            setTimeout(() => {
+                                window.Helpers.redirect('index.html', 2000);
+                            }, 1000);
+                        } else {
+                            throw new Error('Failed to process login response. Please try again.');
+                        }
+                    } catch (error) {
+                        // Handle error
+                        console.error('Login error:', error);
+                        window.Auth.handleAuthError(error, formFeedback);
+                        
+                        // Show more helpful error message
+                        if (error.message && error.message.includes('Network error')) {
+                            formFeedback.textContent = 'Unable to connect to server. Please make sure the server is running on http://localhost:3001';
+                        }
+                    } finally {
+                        // Hide loading state
+                        window.Helpers.hideButtonLoading(submitButton);
+                    }
+                });
+            });
+        })();
+    </script>
+    <style>
+        .spinning {
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>
+

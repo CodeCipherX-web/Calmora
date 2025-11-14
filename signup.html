@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Sign up for Calmora">
+    <title>Sign Up - Calmora</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="favicon.svg" alt="Calmora Logo" style="width: 32px; height: 32px; flex-shrink: 0;">
+                <span>Calmora</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section" style="padding: 3rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+                    <!-- Image Section -->
+                    <div class="signup-image-section">
+                        <div style="position: relative; padding: 2rem;">
+                            <div style="position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 24px; opacity: 0.15; z-index: 0; transform: rotate(-3deg);"></div>
+                            <div style="position: absolute; bottom: -15px; left: -15px; width: 100%; height: 100%; background: linear-gradient(135deg, var(--accent-color), var(--success-color)); border-radius: 24px; opacity: 0.1; z-index: 0; transform: rotate(3deg);"></div>
+                            <div class="auth-image-container" style="position: relative; z-index: 1; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-xl); border: 4px solid var(--primary-color);">
+                                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=700&fit=crop&q=80" alt="Join Us" class="auth-image active" style="width: 100%; height: auto; display: block; transition: opacity 1.5s ease-in-out;">
+                                <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=700&fit=crop&q=80" alt="Mental Wellness" class="auth-image" style="width: 100%; height: auto; display: none; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1.5s ease-in-out;">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=700&fit=crop&q=80" alt="Mindfulness" class="auth-image" style="width: 100%; height: auto; display: none; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1.5s ease-in-out;">
+                                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=700&fit=crop&q=80" alt="Support" class="auth-image" style="width: 100%; height: auto; display: none; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1.5s ease-in-out;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Section -->
+                    <div class="form-container">
+                        <div class="card">
+                            <div style="padding: 2rem;">
+                                <h2 style="text-align: center; margin-bottom: 0.75rem; font-size: 2rem; font-weight: 700;">Create Your Account</h2>
+                                <p style="text-align: center; color: var(--text-medium); margin-bottom: 2rem;">Join Calmora and start your mental health journey today.</p>
+
+                <!-- Form Feedback -->
+                <div id="formFeedback" class="form-feedback"></div>
+
+                <!-- Signup Form -->
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-control" 
+                            placeholder="Choose a username (3-50 characters)"
+                            pattern="[a-zA-Z0-9_.\-]+"
+                            minlength="3"
+                            maxlength="50"
+                            required
+                            autocomplete="username"
+                            aria-describedby="username-error"
+                        >
+                        <span class="error-message" id="username-error" role="alert"></span>
+                        <small style="color: var(--text-light); font-size: 0.875rem; display: block; margin-top: 0.25rem;">
+                            Letters, numbers, underscores, hyphens, and dots only
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-control" 
+                            placeholder="Enter your email address"
+                            required
+                            autocomplete="email"
+                            aria-describedby="email-error"
+                        >
+                        <span class="error-message" id="email-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-control" 
+                            placeholder="Create a password (min. 6 characters)"
+                            minlength="6"
+                            required
+                            autocomplete="new-password"
+                            aria-describedby="password-error"
+                        >
+                        <span class="error-message" id="password-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            class="form-control" 
+                            placeholder="Confirm your password"
+                            minlength="6"
+                            required
+                            autocomplete="new-password"
+                            aria-describedby="confirmPassword-error"
+                        >
+                        <span class="error-message" id="confirmPassword-error" role="alert"></span>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">
+                        Create Account
+                    </button>
+                </form>
+
+                            <p style="text-align: center; margin-top: 2rem; color: var(--text-medium);">
+                                Already have an account? <a href="login.html" style="color: var(--primary-color); font-weight: 600;">Login here</a>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Calmora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="helpers.js"></script>
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Image slideshow for signup page
+        (function() {
+            'use strict';
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const imageContainer = document.querySelector('.signup-image-section .auth-image-container');
+                if (imageContainer) {
+                    const images = imageContainer.querySelectorAll('.auth-image');
+                    let currentIndex = 0;
+                    
+                    function switchImage() {
+                        // Hide current image
+                        images[currentIndex].style.opacity = '0';
+                        setTimeout(() => {
+                            images[currentIndex].style.display = 'none';
+                            
+                            // Move to next image
+                            currentIndex = (currentIndex + 1) % images.length;
+                            
+                            // Show next image
+                            images[currentIndex].style.display = 'block';
+                            setTimeout(() => {
+                                images[currentIndex].style.opacity = '1';
+                            }, 50);
+                        }, 1500);
+                    }
+                    
+                    // Switch image every 4 seconds
+                    setInterval(switchImage, 4000);
+                }
+            });
+        })();
+
+        // Signup form handler with real-time validation
+        (function() {
+            'use strict';
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const signupForm = document.getElementById('signupForm');
+                const formFeedback = document.getElementById('formFeedback');
+                const submitButton = signupForm.querySelector('button[type="submit"]');
+
+                // Redirect if already authenticated
+                window.Auth.redirectIfAuthenticated();
+
+                // Get form inputs
+                const usernameInput = document.getElementById('username');
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                const confirmPasswordInput = document.getElementById('confirmPassword');
+
+                // Real-time username validation
+                usernameInput.addEventListener('input', window.Helpers.debounce(function() {
+                    const value = usernameInput.value.trim();
+                    if (value) {
+                        const isValid = window.Helpers.isValidUsername(value);
+                        const message = isValid ? '' : 'Username must be 3-50 characters and contain only letters, numbers, underscores, hyphens, and dots';
+                        window.Helpers.setFieldValidation(usernameInput, isValid, message);
+                    }
+                }, 300));
+
+                // Real-time email validation
+                emailInput.addEventListener('input', window.Helpers.debounce(function() {
+                    const value = emailInput.value.trim();
+                    if (value) {
+                        const isValid = window.Helpers.isValidEmail(value);
+                        const message = isValid ? '' : 'Please enter a valid email address';
+                        window.Helpers.setFieldValidation(emailInput, isValid, message);
+                    }
+                }, 300));
+
+                // Real-time password validation
+                passwordInput.addEventListener('input', window.Helpers.debounce(function() {
+                    const value = passwordInput.value;
+                    if (value) {
+                        const isValid = value.length >= 6;
+                        const message = isValid ? '' : 'Password must be at least 6 characters';
+                        window.Helpers.setFieldValidation(passwordInput, isValid, message);
+                        
+                        // Re-validate confirm password if it has a value
+                        if (confirmPasswordInput.value) {
+                            const confirmIsValid = confirmPasswordInput.value === value;
+                            const confirmMessage = confirmIsValid ? '' : 'Passwords do not match';
+                            window.Helpers.setFieldValidation(confirmPasswordInput, confirmIsValid, confirmMessage);
+                        }
+                    }
+                }, 300));
+
+                // Real-time password confirmation validation
+                confirmPasswordInput.addEventListener('input', window.Helpers.debounce(function() {
+                    const value = confirmPasswordInput.value;
+                    const passwordValue = passwordInput.value;
+                    if (value && passwordValue) {
+                        const isValid = value === passwordValue;
+                        const message = isValid ? '' : 'Passwords do not match';
+                        window.Helpers.setFieldValidation(confirmPasswordInput, isValid, message);
+                    }
+                }, 300));
+
+                // Handle form submission
+                window.Main.handleFormSubmit(signupForm, async function(form) {
+                    const formData = new FormData(form);
+                    const userData = {
+                        username: formData.get('username').trim(),
+                        email: formData.get('email').trim(),
+                        password: formData.get('password'),
+                    };
+
+                    // Validate password confirmation
+                    if (userData.password !== formData.get('confirmPassword')) {
+                        window.Helpers.setFieldValidation(confirmPasswordInput, false, 'Passwords do not match');
+                        return;
+                    }
+
+                    // Show loading state
+                    window.Helpers.showButtonLoading(submitButton);
+                    window.Helpers.hideMessage(formFeedback);
+
+                    try {
+                        // Call signup API
+                        const result = await window.API.auth.signup(userData);
+                        
+                        // Handle success
+                        window.Auth.handleAuthSuccess({ data: result });
+                        
+                        // Show success message
+                        formFeedback.classList.add('success');
+                        formFeedback.classList.remove('error');
+                        formFeedback.textContent = 'Account created successfully! Redirecting...';
+                        formFeedback.classList.add('show');
+
+                        // Redirect to homepage
+                        window.Helpers.redirect('index.html', 1000);
+                    } catch (error) {
+                        // Handle error
+                        window.Auth.handleAuthError(error, formFeedback);
+                    } finally {
+                        // Hide loading state
+                        window.Helpers.hideButtonLoading(submitButton);
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Find a therapist on Calmora">
+    <title>Therapists - Calmora</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="favicon.svg" alt="Calmora Logo" style="width: 32px; height: 32px; flex-shrink: 0;">
+                <span>Calmora</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="therapists.html">Therapists</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="mood-tracker.html">Mood Tracker</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section" style="padding: 3rem 0;">
+            <div class="container">
+                <h1 class="section-title">Find a Therapist</h1>
+                <p style="text-align: center; color: var(--text-medium); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Connect with licensed mental health professionals who can provide personalized support for your journey.
+                </p>
+
+                <!-- Search and Filter -->
+                <div class="card" style="margin-bottom: 2.5rem;">
+                    <div style="padding: 1.5rem;">
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="searchTherapist" style="display: block; margin-bottom: 0.75rem; font-weight: 600; color: var(--text-dark);">Search Therapists</label>
+                                <input 
+                                    type="text" 
+                                    id="searchTherapist" 
+                                    class="form-control" 
+                                    placeholder="Search by name, specialty, or location"
+                                >
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label style="display: block; margin-bottom: 0.75rem; font-weight: 600; color: var(--text-dark); font-size: 0.9375rem;">Specialty</label>
+                                    <select class="form-control">
+                                        <option value="">All Specialties</option>
+                                        <option value="anxiety">Anxiety</option>
+                                        <option value="depression">Depression</option>
+                                        <option value="trauma">Trauma</option>
+                                        <option value="relationships">Relationships</option>
+                                        <option value="addiction">Addiction</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label style="display: block; margin-bottom: 0.75rem; font-weight: 600; color: var(--text-dark); font-size: 0.9375rem;">Location</label>
+                                    <select class="form-control">
+                                        <option value="">All Locations</option>
+                                        <option value="online">Online</option>
+                                        <option value="in-person">In-Person</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Therapists Grid -->
+                <div class="grid grid-3" id="therapistsGrid">
+                    <div class="card therapist-card">
+                        <div style="padding: 1.5rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80" alt="Dr. Sarah Johnson" class="therapist-image">
+                            <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.375rem;">Dr. Sarah Johnson</h3>
+                            <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 0.9375rem;">Licensed Clinical Psychologist</p>
+                            <div style="text-align: left; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Specialties:</strong> <span style="color: var(--text-medium);">Anxiety, Depression, Trauma</span></p>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Location:</strong> <span style="color: var(--text-medium);">Online & In-Person</span></p>
+                                <p style="color: var(--text-medium); line-height: 1.6; font-size: 0.9375rem; margin-top: 0.75rem;">15 years of experience helping individuals overcome mental health challenges. Specializes in CBT and trauma-informed care.</p>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <a href="mailto:sarah.johnson@calmora.com" class="btn btn-secondary" style="flex: 1; min-width: 120px;">Email</a>
+                                <a href="https://www.psychologytoday.com/us/therapists" target="_blank" class="btn" style="flex: 1; min-width: 120px;">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card therapist-card">
+                        <div style="padding: 1.5rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80" alt="Dr. Michael Chen" class="therapist-image">
+                            <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.375rem;">Dr. Michael Chen</h3>
+                            <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 0.9375rem;">Licensed Marriage & Family Therapist</p>
+                            <div style="text-align: left; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Specialties:</strong> <span style="color: var(--text-medium);">Relationships, Family Therapy, Couples Counseling</span></p>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Location:</strong> <span style="color: var(--text-medium);">Online</span></p>
+                                <p style="color: var(--text-medium); line-height: 1.6; font-size: 0.9375rem; margin-top: 0.75rem;">Specialized in helping couples and families build stronger relationships. Expert in Gottman Method and Emotionally Focused Therapy.</p>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <a href="mailto:michael.chen@calmora.com" class="btn btn-secondary" style="flex: 1; min-width: 120px;">Email</a>
+                                <a href="https://www.gottman.com/" target="_blank" class="btn" style="flex: 1; min-width: 120px;">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card therapist-card">
+                        <div style="padding: 1.5rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&q=80" alt="Dr. Emily Rodriguez" class="therapist-image">
+                            <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.375rem;">Dr. Emily Rodriguez</h3>
+                            <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 0.9375rem;">Licensed Professional Counselor</p>
+                            <div style="text-align: left; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Specialties:</strong> <span style="color: var(--text-medium);">Addiction, Stress Management, Mindfulness</span></p>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Location:</strong> <span style="color: var(--text-medium);">In-Person</span></p>
+                                <p style="color: var(--text-medium); line-height: 1.6; font-size: 0.9375rem; margin-top: 0.75rem;">Expert in addiction recovery and stress management techniques. Certified in DBT and mindfulness-based interventions.</p>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <a href="mailto:emily.rodriguez@calmora.com" class="btn btn-secondary" style="flex: 1; min-width: 120px;">Email</a>
+                                <a href="https://www.samhsa.gov/find-treatment" target="_blank" class="btn" style="flex: 1; min-width: 120px;">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card therapist-card">
+                        <div style="padding: 1.5rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&q=80" alt="Dr. James Wilson" class="therapist-image">
+                            <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.375rem;">Dr. James Wilson</h3>
+                            <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 0.9375rem;">Licensed Clinical Social Worker</p>
+                            <div style="text-align: left; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Specialties:</strong> <span style="color: var(--text-medium);">PTSD, Trauma, EMDR</span></p>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Location:</strong> <span style="color: var(--text-medium);">Online & In-Person</span></p>
+                                <p style="color: var(--text-medium); line-height: 1.6; font-size: 0.9375rem; margin-top: 0.75rem;">Specialized in trauma therapy and EMDR. 12 years of experience helping individuals heal from traumatic experiences.</p>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <a href="mailto:james.wilson@calmora.com" class="btn btn-secondary" style="flex: 1; min-width: 120px;">Email</a>
+                                <a href="https://www.emdria.org/" target="_blank" class="btn" style="flex: 1; min-width: 120px;">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card therapist-card">
+                        <div style="padding: 1.5rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&q=80" alt="Dr. Lisa Thompson" class="therapist-image">
+                            <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.375rem;">Dr. Lisa Thompson</h3>
+                            <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 0.9375rem;">Licensed Professional Counselor</p>
+                            <div style="text-align: left; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Specialties:</strong> <span style="color: var(--text-medium);">Eating Disorders, Body Image, Self-Esteem</span></p>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Location:</strong> <span style="color: var(--text-medium);">Online</span></p>
+                                <p style="color: var(--text-medium); line-height: 1.6; font-size: 0.9375rem; margin-top: 0.75rem;">Dedicated to helping individuals overcome eating disorders and build positive body image. Certified in CBT-E.</p>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <a href="mailto:lisa.thompson@calmora.com" class="btn btn-secondary" style="flex: 1; min-width: 120px;">Email</a>
+                                <a href="https://www.nationaleatingdisorders.org/" target="_blank" class="btn" style="flex: 1; min-width: 120px;">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card therapist-card">
+                        <div style="padding: 1.5rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&q=80" alt="Dr. David Park" class="therapist-image">
+                            <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.375rem;">Dr. David Park</h3>
+                            <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 0.9375rem;">Licensed Clinical Psychologist</p>
+                            <div style="text-align: left; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Specialties:</strong> <span style="color: var(--text-medium);">Child & Adolescent Therapy, ADHD, Autism</span></p>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9375rem;"><strong style="color: var(--text-dark);">Location:</strong> <span style="color: var(--text-medium);">In-Person</span></p>
+                                <p style="color: var(--text-medium); line-height: 1.6; font-size: 0.9375rem; margin-top: 0.75rem;">Specialized in working with children and adolescents. Expert in play therapy and behavioral interventions.</p>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <a href="mailto:david.park@calmora.com" class="btn btn-secondary" style="flex: 1; min-width: 120px;">Email</a>
+                                <a href="https://www.aap.org/" target="_blank" class="btn" style="flex: 1; min-width: 120px;">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Calmora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="theme-toggle.js"></script>
+    <script src="image-fallback.js"></script>
+    <script src="helpers.js"></script>
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="permissions.js"></script>
+    <script src="user-info.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
